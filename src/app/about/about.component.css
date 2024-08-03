@@ -1,0 +1,29 @@
+section{
+  background-color: #1abc9c;
+}
+.star::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #fff;
+}
+.star::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #fff;
+}
+@media (max-width:576px) {
+  .star::after{
+    width: 150%;
+  }
+  .star::before{
+    width: 150%;
+  }
+}

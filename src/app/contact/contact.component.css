@@ -1,0 +1,43 @@
+.star::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #000;
+}
+.star::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #000;
+}
+@media (max-width:576px) {
+  .star::after{
+    width: 150%;
+  }
+  .star::before{
+    width: 150%;
+  }
+}
+
+.form-label{
+  color: #1abc9c;
+  position: absolute;
+  bottom:20%;
+  z-index: -1;
+  opacity: 0;
+  transition: all .5s;
+}
+.form div:hover > .form-label{
+  bottom:86%;
+  opacity: 1;
+}
+
+.form button{
+  background-color: #1abc9c;
+}

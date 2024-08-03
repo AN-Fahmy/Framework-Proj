@@ -1,0 +1,52 @@
+*{
+  transition: all .5s;
+}
+.star::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #000;
+}
+.star::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 250%;
+  height: 3px;
+  background-color: #000;
+}
+@media (max-width:576px) {
+  .star::after{
+    width: 150%;
+  }
+  .star::before{
+    width: 150%;
+  }
+}
+.imageProtfolio{
+  cursor: pointer;
+}
+.imageProtfolio i{
+  opacity: 0;
+}
+.imageProtfolio:hover i{
+  opacity: 1;
+}
+.imageProtfolio:hover img{
+  filter: blur(4px);
+}
+.model{
+  background-color: #00000073;
+  z-index: 9999;
+}
+.layout{
+  background-color: #00000073;
+  z-index: 9999;
+}
+.layout i {
+  cursor: pointer;
+}

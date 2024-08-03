@@ -1,0 +1,39 @@
+<section class="pb-5 animate__animated animate__fadeIn">
+  <div class="container">
+    <div class="d-flex justify-content-end align-items-center flex-column mt-5 pt-5">
+
+      <h3 class="fs-1 fw-bold m-0 text-center">PORTFOLIO COMPONENT</h3>
+
+      <div class="star mb-2 position-relative mt-3 mb-4">
+        <i class="fa-solid fa-star fs-3 mx-2"></i>
+      </div>
+
+      <div class="row g-5">
+        @for (imagePorto of products; track $index) {
+          <div class="col-md-4">
+            <div class="imageProtfolio position-relative">
+              <i class="fa-solid fa-plus position-absolute top-50 start-50 translate-middle text-white display-1 fw-bold z-2"></i>
+              <img (click)="modelImg($event)" class="w-100 rounded-2" [src]="imagePorto.srcImage" alt="imageProtfolio"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+@if (showLayout == true) {
+  <div class="layout d-flex justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100">
+    <div class="imageLayout w-50 animate__animated animate__bounceIn">
+      <i (click)="closeLayout()" class="fa-regular fa-circle-xmark text-white float-end fs-3 mb-2 "></i>
+      <img [src]="imgSrc" class="w-100" alt="">
+    </div>
+  </div>
+}
+
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <img class="w-100" [src]="imgSrc" alt="">
+  </div>
+</div> -->

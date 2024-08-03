@@ -1,0 +1,23 @@
+<section class="pb-5 animate__animated animate__fadeIn">
+  <div class="container">
+    <div class="d-flex justify-content-end align-items-center flex-column mt-5 pt-5">
+
+      <h3 class="fs-1 fw-bold m-0 text-center">CONTACT SECTION</h3>
+
+      <div class="star mb-2 position-relative mt-3 mb-4">
+        <i class="fa-solid fa-star fs-3 mx-2"></i>
+      </div>
+
+      <div class="form w-75 d-flex justify-content-center align-items-center flex-column gap-3">
+        @for (input of dataInputs; track $index) {
+          <div class="position-relative w-100">
+            <label [for]="input.id" class="form-label">{{input.id}}:</label>
+            <input [type]="input.type" [id]="input.id" class="form-control border-bottom border-0 shadow-none mb-3 p-3" [placeholder]="input.id">
+          </div>
+        }
+      <button class="btn text-white align-self-start">Send Message</button>
+
+      </div>
+    </div>
+  </div>
+</section>
